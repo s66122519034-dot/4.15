@@ -1,0 +1,169 @@
+/* Simple blue and white theme for a student project */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f6fc;
+    color: #263548;
+}
+
+.container {
+    max-width: 1050px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+header {
+    margin-bottom: 25px;
+}
+
+h1 {
+    color: #2563a6;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #2563a6;
+    margin-top: 0;
+}
+
+header p, .hint {
+    color: #5f6f83;
+    line-height: 1.5;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 310px 1fr;
+    gap: 20px;
+}
+
+.box {
+    padding: 24px;
+    background: white;
+    border: 1px solid #d9e4f2;
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    margin: 18px 0 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.input-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-row input {
+    flex: 1;
+    min-width: 0;
+}
+
+.input-row span {
+    width: 35px;
+    color: #607184;
+    font-size: 13px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bdcde0;
+    border-radius: 5px;
+    background: white;
+    font-size: 15px;
+}
+
+input:focus, select:focus {
+    outline: 2px solid #9cc5f3;
+}
+
+button {
+    margin-top: 22px;
+    padding: 11px 20px;
+    background: #347ac4;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #215d9b;
+}
+
+.answer {
+    background: #eaf3ff;
+    border: 1px solid #cce1fa;
+    border-radius: 6px;
+    margin-top: 25px;
+    padding: 15px;
+}
+
+.answer h3 {
+    margin: 0 0 10px;
+    color: #215d9b;
+}
+
+.answer p {
+    margin: 8px 0;
+}
+
+.formula {
+    font-size: 14px;
+    text-align: center;
+    color: #5b6b7d;
+}
+
+.chart-area {
+    width: 100%;
+    height: 380px;
+    margin-top: 20px;
+}
+
+.legend {
+    margin-top: 15px;
+    font-size: 13px;
+    color: #596a7c;
+    text-align: center;
+}
+
+.blue-dot, .red-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #347ac4;
+    margin-left: 12px;
+}
+
+.red-dot {
+    background: #e04444;
+}
+
+footer {
+    margin: 24px 0;
+    color: #7a8898;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Put the graph below the form on small screens */
+@media (max-width: 750px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+    .chart-area {
+        height: 300px;
+    }
+}
